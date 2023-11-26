@@ -28,8 +28,6 @@ public class Robot extends TimedRobot {
   public static DriveArcade driveArcade;
   public static UiSmartDashboard uiSmartDashboard;
 
-  public static int AutosCount = 500;
-
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
@@ -42,14 +40,14 @@ public class Robot extends TimedRobot {
     oi = new OI();
     uiSmartDashboard = new UiSmartDashboard();
 
-    autonomousCommand = new DriveOverLine();
-
     pigeon = new Pigeon(RobotMap.PIGEON);
 
     //drivetrain
     drivetrain = new Drivetrain();
     driveArcade = new DriveArcade();
     drivetrain.setDefaultCommand(driveArcade);
+
+    autonomousCommand = new DriveOverLine();
   }
 
   /**
@@ -81,20 +79,20 @@ public class Robot extends TimedRobot {
   /** This autonomous runs the autonomous command selected by your {@link RobotContainer} class. */
   @Override
   public void autonomousInit() {
-    // schedule the autonomous command (example)
-    if (autonomousCommand != null) {
-      autonomousCommand.schedule();
-    }
   }
 
   /** This function is called periodically during autonomous. */
   @Override
   public void autonomousPeriodic() {
-    if (Timer.getMatchTime() <= 5.0) {
-      Robot.drivetrain.driveArcade(.5,.5);
-    } else {
-      Robot.drivetrain.driveArcade(0,0);
+    // schedule the autonomous command (example)
+    if (autonomousCommand != null) {
+      autonomousCommand.schedule();
     }
+//    if (Timer.getMatchTime() <= 5.0) {
+//      Robot.drivetrain.driveArcade(.5,0);
+//    } else {
+//      Robot.drivetrain.driveArcade(0,0);
+//    }
   }
 
   @Override
