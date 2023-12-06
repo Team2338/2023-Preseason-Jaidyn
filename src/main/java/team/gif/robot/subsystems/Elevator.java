@@ -20,7 +20,7 @@ public class Elevator extends SubsystemBase {
         elevatorMotor.setSensorPhase(true);
         elevatorMotor.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
 
-        elevatorMotor.setInverted(true);
+//        elevatorMotor.setInverted(true);
 
         //soft limiter
         elevatorMotor.configForwardSoftLimitEnable(true);
@@ -31,9 +31,17 @@ public class Elevator extends SubsystemBase {
         //peak out percent only 50% power
         elevatorMotor.configPeakOutputForward(.5);
         elevatorMotor.configPeakOutputReverse(-.5);
+
+        //pid control
+        elevatorMotor.config_kF(0,0.002);
+        elevatorMotor.config_kP(0,0.000002);
     }
 
-    public void move(double percent) {
+    /**
+     * This method is used to set the elevator power/percent.
+     * @param percent is the targeted percentage
+     */
+    public void setElevatorMotorPercent(double percent) {
         elevatorMotor.set(ControlMode.PercentOutput, percent);
     }
 
@@ -42,7 +50,8 @@ public class Elevator extends SubsystemBase {
      *  @param pos is the targeted position
      */
     public void setElevatorPos(double pos) {
-        elevatorMotor.set(ControlMode.Position, pos);}
+        elevatorMotor.set(ControlMode.Position, pos);
+    }
 
     /**
      * This method will used to see the position of the

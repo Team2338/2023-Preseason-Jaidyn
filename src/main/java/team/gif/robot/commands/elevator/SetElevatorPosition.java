@@ -22,9 +22,9 @@ public class SetElevatorPosition extends CommandBase {
     @Override
     public void initialize() {
         if (Robot.elevator.getPosition() > Constants.Elevator.MAX_POS) {
-            Robot.elevator.setElevatorPos(Constants.Elevator.MAX_POS-10);
+            Robot.elevator.setElevatorPos(Constants.Elevator.MAX_POS);
         } else if (Robot.elevator.getPosition() < Constants.Elevator.MIN_POS) {
-            Robot.elevator.setElevatorPos(Constants.Elevator.MIN_POS + 10);
+            Robot.elevator.setElevatorPos(Constants.Elevator.MIN_POS);
         }
 
         Robot.elevator.setElevatorPos(TargetPos);

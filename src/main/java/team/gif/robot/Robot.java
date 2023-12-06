@@ -39,8 +39,6 @@ public class Robot extends TimedRobot {
 
     elevator = new Elevator();
     elevator.setDefaultCommand(new ElevatorManualControl());
-
-    elevator.zeroEncoder();
   }
 
   /**

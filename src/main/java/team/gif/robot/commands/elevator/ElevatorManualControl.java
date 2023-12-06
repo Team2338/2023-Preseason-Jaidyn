@@ -19,7 +19,7 @@ public class ElevatorManualControl extends CommandBase {
     @Override
     public void execute() {
         double percent = -Robot.oi.aux.getRightY();
-        Robot.elevator.move(percent);
+        Robot.elevator.setElevatorMotorPercent(percent);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.
