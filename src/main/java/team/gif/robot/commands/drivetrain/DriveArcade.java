@@ -6,7 +6,7 @@ import team.gif.robot.Robot;
 public class DriveArcade extends CommandBase {
     public DriveArcade() {
         super();
-        //addRequirements(Robot.climber); // uncomment
+        addRequirements(Robot.drivetrain); // uncomment
     }
 
     // Called when the command is initially scheduled.

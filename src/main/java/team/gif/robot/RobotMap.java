@@ -8,8 +8,8 @@ public abstract class RobotMap {
     public static final int TEST_CONTROLLER_ID = 2;
 
     //drivetrain
-    public static final int LEFT_MOTOR = 0;
-    public static final int RIGHT_MOTOR = 1;
+    public static final int LEFT_MOTOR = 7;
+    public static final int RIGHT_MOTOR = 5;
 
-    public static final int PIGEON = 12;
+    public static final int PIGEON = 5;
 }
