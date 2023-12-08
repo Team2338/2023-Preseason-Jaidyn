@@ -11,12 +11,6 @@ public class Drive extends CommandBase {
         //addRequirements(Robot.climber); // uncomment
     }
 
-    public Drive(double percent){
-        super();
-        addRequirements(Robot.drivetrain);
-
-        drivePercent = percent;
-    }
 
     // Called when the command is initially scheduled.
     @Override
@@ -25,7 +19,7 @@ public class Drive extends CommandBase {
     // Called every time the scheduler runs (~20ms) while the command is scheduled
     @Override
     public void execute() {
-        Robot.drivetrain.driveArcade(drivePercent,0);
+        Robot.drivetrain.driveArcade(.7,0);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.
@@ -37,6 +31,6 @@ public class Drive extends CommandBase {
     // Called when the command ends or is interrupted.
     @Override
     public void end(boolean interrupted) {
-        Robot.drivetrain.driveArcade(0,0);
+
     }
 }

@@ -6,10 +6,10 @@ import team.gif.robot.commands.drivetrain.DriveArcade;
 
 public class DriveOverLine extends SequentialCommandGroup {
     public DriveOverLine() {
-        if (Timer.getMatchTime() <= 5.0) {
-            new Drive(.5).schedule();
-        } else {
-            new Drive(.0).schedule();
+        new Drive().schedule();
+
+        if (Timer.getMatchTime() > 5.0) {
+            new Drive().cancel();
         }
     }
 }
