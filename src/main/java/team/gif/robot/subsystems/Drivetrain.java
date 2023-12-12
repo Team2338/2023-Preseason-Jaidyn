@@ -15,19 +15,16 @@ public class Drivetrain extends SubsystemBase {
     private static DifferentialDrive drive;
 
     public Drivetrain() {
-        drive = new DifferentialDrive((MotorController) leftMotor, (MotorController) rightMotor);
-
         leftMotor.configFactoryDefault();
         rightMotor.configFactoryDefault();
 
         leftMotor.setNeutralMode(NeutralMode.Brake);
         rightMotor.setNeutralMode(NeutralMode.Brake);
 
-        // turn off the drive train watchdog - otherwise it outputs unnecessary errors on the console
-        drive.setSafetyEnabled(false);
+        drive = new DifferentialDrive((MotorController) leftMotor, (MotorController) rightMotor);
 
-        leftMotor.setInverted(false);
-        rightMotor.setInverted(false);
+        // turn off the drive train watchdog - otherwise it outputs unnecessary errors on the console
+        drive.setSafetyEnabled(true);
 
         Robot.pigeon.resetPigeonPosition();
     }
