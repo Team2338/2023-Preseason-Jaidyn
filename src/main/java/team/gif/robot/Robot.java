@@ -34,11 +34,12 @@ public class Robot extends TimedRobot {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     robotContainer = new RobotContainer();
-    oi = new OI();
     uiSmartDashboard = new UiSmartDashboard();
 
     elevator = new Elevator();
-    elevator.setDefaultCommand(new ElevatorManualControl());
+//    elevator.setDefaultCommand(new ElevatorManualControl());
+
+    oi = new OI();
   }
 
   /**

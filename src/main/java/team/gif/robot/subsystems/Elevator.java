@@ -17,24 +17,24 @@ public class Elevator extends SubsystemBase {
         elevatorMotor.setNeutralMode(NeutralMode.Brake);
 
         //encoders
-        elevatorMotor.setSensorPhase(true);
-        elevatorMotor.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
+//        elevatorMotor.setSensorPhase(true);
+//        elevatorMotor.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
 
 //        elevatorMotor.setInverted(true);
 
         //soft limiter
-        elevatorMotor.configForwardSoftLimitEnable(true);
-        elevatorMotor.configReverseSoftLimitEnable(true);
-        elevatorMotor.configForwardSoftLimitThreshold(Constants.Elevator.MAX_POS);
-        elevatorMotor.configReverseSoftLimitThreshold(Constants.Elevator.MIN_POS);
+//        elevatorMotor.configForwardSoftLimitEnable(true);
+//        elevatorMotor.configReverseSoftLimitEnable(true);
+//        elevatorMotor.configForwardSoftLimitThreshold(Constants.Elevator.MAX_POS);
+//        elevatorMotor.configReverseSoftLimitThreshold(Constants.Elevator.MIN_POS);
 
         //peak out percent only 50% power
-        elevatorMotor.configPeakOutputForward(.5);
-        elevatorMotor.configPeakOutputReverse(-.5);
+//        elevatorMotor.configPeakOutputForward(1);
+//        elevatorMotor.configPeakOutputReverse(1);
 
         //pid control
-        elevatorMotor.config_kF(0,0.002);
-        elevatorMotor.config_kP(0,0.000002);
+//        elevatorMotor.config_kF(0,0.002);
+//        elevatorMotor.config_kP(0,0.000002);
     }
 
     /**
