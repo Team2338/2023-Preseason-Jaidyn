@@ -12,4 +12,6 @@ public abstract class RobotMap {
     public static final int RIGHT_MOTOR = 5;
 
     public static final int PIGEON = 5;
+
+    public static final int COLLECTOR = 0;
 }

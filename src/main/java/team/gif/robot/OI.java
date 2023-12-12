@@ -2,6 +2,8 @@ package team.gif.robot;
 
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
+import team.gif.robot.commands.collector.RunCollector;
+import team.gif.robot.commands.collector.RunCollectorBack;
 
 public class OI {
     /*
@@ -86,5 +88,8 @@ public class OI {
          * Simple Test:
          *   aX.onTrue(new PrintCommand("aX"));
          */
+
+        dRBump.whileTrue(new RunCollector());
+        dLBump.whileTrue(new RunCollectorBack());
     }
 }
