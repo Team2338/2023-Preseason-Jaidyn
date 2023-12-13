@@ -9,7 +9,7 @@ public abstract class RobotMap {
 
     //drivetrain
     public static final int LEFT_MOTOR = 7;
-    public static final int RIGHT_MOTOR = 5;
+    public static final int RIGHT_MOTOR = 11;
 
     public static final int PIGEON = 5;
 
