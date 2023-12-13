@@ -1,10 +1,11 @@
 package team.gif.robot.commands.elevator;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import team.gif.robot.Constants;
 import team.gif.robot.Robot;
 
-public class ElevatorManualControlBack extends CommandBase {
-    public ElevatorManualControlBack() {
+public class ElevatorManualControlUp extends CommandBase {
+    public ElevatorManualControlUp() {
         super();
         addRequirements(Robot.elevator);
     }
@@ -17,13 +18,13 @@ public class ElevatorManualControlBack extends CommandBase {
     // Called every time the scheduler runs (~20ms) while the command is scheduled
     @Override
     public void execute() {
-        double percent = Robot.oi.aux.getRightY();
-        Robot.elevator.setElevatorMotorPercent(-.7);
+        Robot.elevator.setElevatorMotorPercent(.7);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.
     @Override
     public boolean isFinished() {
+//        return Robot.elevator.getPosition() >= Constants.Elevator.MAX_POS;
         return false;
     }
 

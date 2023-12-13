@@ -17,8 +17,8 @@ public class Elevator extends SubsystemBase {
         elevatorMotor.setNeutralMode(NeutralMode.Brake);
 
         //encoders
-//        elevatorMotor.setSensorPhase(true);
-//        elevatorMotor.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
+        elevatorMotor.setSensorPhase(true);
+        elevatorMotor.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
 
 //        elevatorMotor.setInverted(true);
 

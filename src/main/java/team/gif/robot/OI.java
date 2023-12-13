@@ -3,9 +3,8 @@ package team.gif.robot;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
-import team.gif.robot.commands.elevator.ElevatorManualControl;
-import team.gif.robot.commands.elevator.ElevatorManualControlBack;
-import team.gif.robot.commands.elevator.SetElevatorPosition;
+import team.gif.robot.commands.elevator.ElevatorManualControlDown;
+import team.gif.robot.commands.elevator.ElevatorManualControlUp;
 
 public class OI {
     /*
@@ -91,13 +90,9 @@ public class OI {
          *   aX.onTrue(new PrintCommand("aX"));
          */
 
-        //dA.and(dRBump).onTrue(new InstantCommand(Robot.elevator::zeroEncoder));
+        dDPadUp.whileTrue(new ElevatorManualControlUp());
+        dDPadDown.whileTrue(new ElevatorManualControlDown());
 
-//        aDPadUp.onTrue(new SetElevatorPosition(Constants.Elevator.COLLECT_POS));
-//        aB.onTrue(new SetElevatorPosition(Constants.Elevator.STAGE_ONE_POS));
-//        aX.onTrue(new SetElevatorPosition(Constants.Elevator.STAGE_TWO_POS));
-//        aA.onTrue(new SetElevatorPosition(Constants.Elevator.STAGE_THREE_POS));
-        dA.whileTrue(new ElevatorManualControl());
-//        dB.whileTrue(new ElevatorManualControlBack());
+        dA.onTrue(new InstantCommand(Robot.elevator::zeroEncoder));
     }
 }
