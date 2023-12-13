@@ -13,4 +13,15 @@ package team.gif.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
+
+    public static class Elevator {
+        // Elevator position
+        public static final int MAX_POS = 100;
+        public static final int MIN_POS = 0;
+        public static final int COLLECT_POS = 0; //TODO: need to find it.
+        public static final int STAGE_ONE_POS = 0;
+        public static final int STAGE_TWO_POS = 0;
+        public static final int STAGE_THREE_POS = 0;
+
+    }
 }
