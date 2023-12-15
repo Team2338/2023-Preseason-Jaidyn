@@ -21,12 +21,12 @@ public class UiSmartDashboard {
     public UiSmartDashboard() {
         ShuffleboardTab tab = Shuffleboard.getTab("SmartDashboard"); // Gets a reference to the shuffleboard tab
 
-        tab.addDouble("Elevator Encoder", elevator::getPosition);
-        tab.add("BotHead", (x) -> {
-                    x.setSmartDashboardType("Gyro");
-                    x.addDoubleProperty("Value", () -> Robot.pigeon.getCompassHeading(), null);
-                })
-                .withPosition(5, 0);
+//        tab.addDouble("Elevator Encoder", elevator::getPosition);
+//        tab.add("BotHead", (x) -> {
+//                    x.setSmartDashboardType("Gyro");
+//                    x.addDoubleProperty("Value", () -> Robot.pigeon.getCompassHeading(), null);
+//                })
+//                .withPosition(5, 0);
 
     }
 

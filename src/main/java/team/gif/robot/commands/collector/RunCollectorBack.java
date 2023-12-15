@@ -17,7 +17,7 @@ public class RunCollectorBack extends CommandBase {
     // Called every time the scheduler runs (~20ms) while the command is scheduled
     @Override
     public void execute() {
-        Robot.collector.setCollectorMotor(-.1);
+        Robot.collector.setCollectorMotor(-.45);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.

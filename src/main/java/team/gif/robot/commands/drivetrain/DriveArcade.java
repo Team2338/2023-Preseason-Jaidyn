@@ -18,7 +18,7 @@ public class DriveArcade extends CommandBase {
     public void execute() {
         double forwardBackward = Robot.oi.driver.getLeftY();
         double rot = Robot.oi.driver.getRightX();
-        Robot.drivetrain.driveArcade(-forwardBackward,rot);
+        Robot.drivetrain.driveArcade(-rot,forwardBackward);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.

@@ -22,8 +22,9 @@ public class Drivetrain extends SubsystemBase {
         rightMotor.setNeutralMode(NeutralMode.Brake);
 
         rightMotor.setInverted(true);
+        leftMotor.setInverted(true);
 
-        drive = new DifferentialDrive((MotorController) leftMotor, (MotorController) rightMotor);
+        drive = new DifferentialDrive((MotorController) rightMotor, (MotorController) leftMotor);
 
         // turn off the drive train watchdog - otherwise it outputs unnecessary errors on the console
         drive.setSafetyEnabled(true);

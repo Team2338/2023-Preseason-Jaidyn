@@ -92,8 +92,8 @@ public class OI {
          *   aX.onTrue(new PrintCommand("aX"));
          */
 
-        dDPadUp.whileTrue(new ElevatorManualControlUp());
-        dDPadDown.whileTrue(new ElevatorManualControlDown());
+        aDPadUp.whileTrue(new ElevatorManualControlUp());
+        aDPadDown.whileTrue(new ElevatorManualControlDown());
 
         dA.onTrue(new InstantCommand(Robot.elevator::zeroEncoder));
 

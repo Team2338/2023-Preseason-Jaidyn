@@ -20,7 +20,7 @@ public class Elevator extends SubsystemBase {
         elevatorMotor.setSensorPhase(true);
         elevatorMotor.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
 
-//        elevatorMotor.setInverted(true);
+        elevatorMotor.setInverted(true);
 
         //soft limiter
 //        elevatorMotor.configForwardSoftLimitEnable(true);
