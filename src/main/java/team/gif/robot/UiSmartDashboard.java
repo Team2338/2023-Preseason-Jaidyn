@@ -23,12 +23,6 @@ public class UiSmartDashboard {
 
         tab.addDouble("Elevator Encoder", elevator::getPosition);
         updateUI();
-//        tab.add("BotHead", (x) -> {
-//                    x.setSmartDashboardType("Gyro");
-//                    x.addDoubleProperty("Value", () -> Robot.pigeon.getCompassHeading(), null);
-//                })
-//                .withPosition(5, 0);
-
     }
 
     /**

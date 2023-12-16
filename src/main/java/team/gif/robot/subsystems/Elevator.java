@@ -21,20 +21,6 @@ public class Elevator extends SubsystemBase {
         elevatorMotor.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative);
 
         elevatorMotor.setInverted(true);
-
-        //soft limiter
-//        elevatorMotor.configForwardSoftLimitEnable(true);
-//        elevatorMotor.configReverseSoftLimitEnable(true);
-//        elevatorMotor.configForwardSoftLimitThreshold(Constants.Elevator.MAX_POS);
-//        elevatorMotor.configReverseSoftLimitThreshold(Constants.Elevator.MIN_POS);
-
-        //peak out percent only 50% power
-//        elevatorMotor.configPeakOutputForward(1);
-//        elevatorMotor.configPeakOutputReverse(1);
-
-        //pid control
-//        elevatorMotor.config_kF(0,0.002);
-//        elevatorMotor.config_kP(0,0.000002);
     }
 
     /**

@@ -44,8 +44,6 @@ public class Robot extends TimedRobot {
     robotContainer = new RobotContainer();
 
     elevator = new Elevator();
-//    elevator.setDefaultCommand(new ElevatorManualControl());
-
 
     pigeon = new Pigeon(RobotMap.PIGEON);
 

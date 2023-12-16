@@ -8,7 +8,6 @@ public class DriveOver extends SequentialCommandGroup {
     public DriveOver() {
         addCommands(
             new AutoDrive(10)
-            //new WaitCommand(3).andThen(new StopAutoDrive())
         );
     }
 }
