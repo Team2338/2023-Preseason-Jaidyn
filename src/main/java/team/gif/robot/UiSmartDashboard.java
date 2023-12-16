@@ -5,6 +5,8 @@ import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+import static team.gif.robot.Robot.elevator;
+
 public class UiSmartDashboard {
 
     /**
@@ -18,6 +20,15 @@ public class UiSmartDashboard {
      */
     public UiSmartDashboard() {
         ShuffleboardTab tab = Shuffleboard.getTab("SmartDashboard"); // Gets a reference to the shuffleboard tab
+
+        tab.addDouble("Elevator Encoder", elevator::getPosition);
+        updateUI();
+//        tab.add("BotHead", (x) -> {
+//                    x.setSmartDashboardType("Gyro");
+//                    x.addDoubleProperty("Value", () -> Robot.pigeon.getCompassHeading(), null);
+//                })
+//                .withPosition(5, 0);
+
     }
 
     /**
