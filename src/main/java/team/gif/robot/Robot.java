@@ -7,6 +7,7 @@ package team.gif.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import team.gif.robot.commands.autos.DriveOver;
 import team.gif.robot.subsystems.Elevator;
 import team.gif.robot.commands.drivetrain.DriveArcade;
 import team.gif.robot.subsystems.Collector;
@@ -45,8 +46,6 @@ public class Robot extends TimedRobot {
     elevator = new Elevator();
 //    elevator.setDefaultCommand(new ElevatorManualControl());
 
-    uiSmartDashboard = new UiSmartDashboard();
-    uiSmartDashboard = new UiSmartDashboard();
 
     pigeon = new Pigeon(RobotMap.PIGEON);
 
@@ -57,6 +56,7 @@ public class Robot extends TimedRobot {
 
     collector = new Collector();
 
+    uiSmartDashboard = new UiSmartDashboard();
     oi = new OI();
   }
 
@@ -98,10 +98,7 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during autonomous. */
   @Override
   public void autonomousPeriodic() {
-    while (AutosCount >= 0) {
-      Robot.drivetrain.driveArcade(.2,0);
-      AutosCount--;
-    }
+    new DriveOver().schedule();
   }
 
   @Override
